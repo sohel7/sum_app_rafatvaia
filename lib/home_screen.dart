@@ -71,12 +71,53 @@ class _HomeScreenState extends State<HomeScreen> {
                    print(SecondNumber);
                    result= firstNumber + SecondNumber;
                    setState(() {
-
                    });
-
                  }
-               }, icon: const Icon(Icons.add), label: const Text('Add'),)
-
+               }, icon: const Icon(Icons.add), label: const Text('Add'),),
+               ElevatedButton.icon(onPressed: ( ){
+                 if (_formKey.currentState!.validate()){
+                   double firstNumber = double.parse(_fieldOneTeController.text.trim());
+                   double SecondNumber = double.parse(_fieldTwoTeController.text.trim());
+                   print(firstNumber);
+                   print(SecondNumber);
+                   result= firstNumber - SecondNumber;
+                   setState(() {
+                   });
+                 }
+               }, icon: const Icon(Icons.remove), label: const Text('Minus'),),
+               ElevatedButton.icon(onPressed: ( ){
+                 if (_formKey.currentState!.validate()){
+                   double firstNumber = double.parse(_fieldOneTeController.text.trim());
+                   double SecondNumber = double.parse(_fieldTwoTeController.text.trim());
+                   print(firstNumber);
+                   print(SecondNumber);
+                   result= firstNumber * SecondNumber;
+                   setState(() {
+                   });
+                 }
+               }, icon: const Icon(Icons.star), label: const Text('Multiply'),),
+               ElevatedButton.icon(onPressed: ( ){
+                 if (_formKey.currentState!.validate()){
+                   double firstNumber = double.parse(_fieldOneTeController.text.trim());
+                   double SecondNumber = double.parse(_fieldTwoTeController.text.trim());
+                   print(firstNumber);
+                   print(SecondNumber);
+                   result= firstNumber / SecondNumber;
+                   setState(() {
+                   });
+                 }
+               }, icon: const Icon(Icons.sign_language_sharp), label: const Text('Devidation'),),
+               ElevatedButton.icon(onPressed: ( ){
+                 if (_formKey.currentState!.validate()){
+                   double firstNumber = double.parse(_fieldOneTeController.text.trim());
+                   double SecondNumber = double.parse(_fieldTwoTeController.text.trim());
+                   print(firstNumber);
+                   print(SecondNumber);
+                   result= firstNumber %  SecondNumber;
+                   setState(() {
+                   });
+                 }
+               }, icon: const Icon(Icons.sign_language_sharp), label: const Text('Modulus'),),
               ],
             )
           ],
